@@ -9,7 +9,7 @@ data class RMCharacter(
     val status: String?,
     val species: String?,
     val type: String,
-    val gender: String,
+    val gender: String?,
     val origin: Origin?,
     val location: Location?,
     val episode: List<String>?,

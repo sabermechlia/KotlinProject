@@ -14,7 +14,7 @@ class DataRepository(private val apiManager: ApiManager) {
                     null,
                     null,
                     characterRemoteEntity.type,
-                    characterRemoteEntity.gender,
+                    null,
                     null,
                     null,
                     null,

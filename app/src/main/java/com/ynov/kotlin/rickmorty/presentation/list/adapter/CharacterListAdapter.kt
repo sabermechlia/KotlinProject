@@ -41,14 +41,12 @@ class CharacterListAdapter: RecyclerView.Adapter<CharacterListAdapter.ViewHolder
     class ViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
         var image : ImageView = itemView.findViewById(R.id.Avatar)
         var name : TextView = itemView.findViewById(R.id.Name)
-        var genre : TextView = itemView.findViewById(R.id.Genre)
         var type : TextView = itemView.findViewById(R.id.Type)
         var id : String? =""
 
         fun bind(rmChacter: RMCharacter){
             Picasso.get().load(rmChacter.image).into(image)
             itemView.Name.text = rmChacter.name
-            itemView.Genre.text = rmChacter.gender
             itemView.Type.text = rmChacter.type
             id = rmChacter.id
         }

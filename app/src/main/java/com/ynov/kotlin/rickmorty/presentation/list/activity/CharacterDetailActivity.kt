@@ -27,6 +27,9 @@ class CharacterDetailActivity : AppCompatActivity(){
         setContentView(R.layout.character_detail_activity)
         val id = intent.getStringExtra("id")
         viewModel = CharacterViewModel(id)
+
+        // TODO on peut accèder aux view directement depuis leur id en kotlin :
+        //  character_delail_activity_avatar au lieu de  image =  findViewById(R.id.character_delail_activity_avatar)
         image =  findViewById(R.id.character_delail_activity_avatar)
         name = findViewById(R.id.character_delail_activity_name)
         status = findViewById(R.id.character_delail_activity_status)

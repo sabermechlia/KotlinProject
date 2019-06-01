@@ -22,6 +22,8 @@ class CharacterListViewModel: ViewModel() {
                     characterListLiveData.postValue(it)
                 },
                 onError = {
+                    // TODO ça ne sert à rien de throw une erreur, le but de Rx c'est justement de gérer les erreurs,
+                    //  pas de faire crash l'appli à la fin du flux
                     throw error(it)
                 }
             )

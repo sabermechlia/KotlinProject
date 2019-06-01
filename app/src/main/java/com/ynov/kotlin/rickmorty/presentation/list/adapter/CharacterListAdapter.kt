@@ -39,6 +39,7 @@ class CharacterListAdapter: RecyclerView.Adapter<CharacterListAdapter.ViewHolder
     }
 
     class ViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
+        // TODO en Android les id sont tout en minuscule et _ pour les séparer les mots
         var image : ImageView = itemView.findViewById(R.id.Avatar)
         var name : TextView = itemView.findViewById(R.id.Name)
         var type : TextView = itemView.findViewById(R.id.Type)
@@ -52,6 +53,7 @@ class CharacterListAdapter: RecyclerView.Adapter<CharacterListAdapter.ViewHolder
         }
         init {
             itemView.setOnClickListener {
+                // TODO attention aux var qui peuvent être en val
                 var intent=Intent(itemView.context, CharacterDetailActivity::class.java)
                 intent.putExtra("id",id)
                 itemView.context.startActivity(intent)
